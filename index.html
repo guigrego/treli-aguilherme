@@ -648,7 +648,7 @@ function desenharTrelica(nos,barras,mapNos,letrasInf,letrasSup){
   Object.entries(nos).forEach(([l,[x,y]])=>{
     const cx=px(x),cy=py(y),isI=infS.has(l);
     h+=`<circle cx="${cx}" cy="${cy}" r="4" fill="${isI?'#00e5ff':'#ff6b35'}" stroke="${isI?'#005570':'#7a2f10'}" stroke-width="1"/>`;
-    h+=`<text x="${cx}" y="${cy+(isI?13:-7)}" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" font-weight="700" fill="${isI?'#00e5ff':'#ff6b35'}">${l}</text>`;
+    h+=`<text x="${cx}" y="${cy+(isI?13:-7)}" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" font-weight="700" fill="${isI?'#00e5ff':'#ff6b35'}">${l.toUpperCase()}</text>`;
   });
   const hx2=PL-22,Hv=parseFloat(document.getElementById('p_H').value)||7.5;
   h+=`<line x1="${hx2}" y1="${py(0)}" x2="${hx2}" y2="${py(Hv)}" stroke="#64748b" stroke-width="1" stroke-dasharray="3,2"/>`;
@@ -663,4 +663,5 @@ recalcPerfil();
 calcular();
 </script>
 </body>
+</html>
 </html>
