@@ -14,7 +14,7 @@
     --border: #252a38;
     --accent: #00e5ff;
     --accent2: #ff6b35;
-    --accent3: #7fff6e;
+    --accent3: #7fff6e;h
     --text: #e2e8f0;
     --muted: #64748b;
     --bar-inf: #4a9eff;
@@ -497,7 +497,7 @@ function calcular(){
     const Nv=dir.reduce((s,d,k)=>s+d*uv[k],0)/L;
     const NNL=Nr*Nv*L;
     soma+=NNL;
-    linhas.push({idx:idx+1,nos:`${u}-${v}`,L,Nr,Nv,NNL});
+    linhas.push({idx:idx+1,nos:`${u.toUpperCase()}-${v.toUpperCase()}`,L,Nr,Nv,NNL});
   }
 
   const flecha_mm = soma/(E*A_m2)*1000;
@@ -539,7 +539,7 @@ function calcular(){
       const g2 = G2_nó[mapNos[no]].toFixed(4);
       const q  = Q_nó[mapNos[no]].toFixed(4);
       const pd = (G1_nó[mapNos[no]]+G2_nó[mapNos[no]]+Q_nó[mapNos[no]]).toFixed(4);
-      return `<tr><td>${i+1}</td><td>${no}</td>
+      return `<tr><td>${i+1}</td><td>${no.toUpperCase()}</td>
         <td class="neg">${g1}</td>
         <td class="neg">${g2}</td>
         <td class="neg">${q}</td>
